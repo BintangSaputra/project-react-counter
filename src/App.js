@@ -3,11 +3,13 @@ import React from "react";
 import "./App.css";
 import Counter from "./components/counter";
 import "semantic-ui-css/semantic.min.css";
+import Clock from "./components/clock";
 
 function App() {
   return (
     <div>
       <Counter />;
+      <Clock />
     </div>
   );
 }
