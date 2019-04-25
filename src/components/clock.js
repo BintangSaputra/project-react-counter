@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "semantic-ui-react";
 
 class Clock extends React.Component {
   state = {
@@ -21,10 +22,12 @@ class Clock extends React.Component {
     const s = this.state.time.getSeconds();
 
     return (
-      <h1>
-        {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}{" "}
-        {h < 12 ? "am" : "pm"}
-      </h1>
+      <Container>
+        <h1>
+          {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}{" "}
+          {h < 12 ? "am" : "pm"}
+        </h1>
+      </Container>
     );
   }
 }
