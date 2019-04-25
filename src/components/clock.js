@@ -17,13 +17,18 @@ class Clock extends React.Component {
   };
 
   render() {
+    const styledClock = {
+      display: "flex",
+      justifyContent: "center",
+      color: "grey"
+    };
     const h = this.state.time.getHours();
     const m = this.state.time.getMinutes();
     const s = this.state.time.getSeconds();
 
     return (
       <Container>
-        <h1>
+        <h1 style={styledClock}>
           {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}{" "}
           {h < 12 ? "am" : "pm"}
         </h1>
